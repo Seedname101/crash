@@ -9,13 +9,12 @@
   <p id="spamr"></p>
  </body>
  <script type="text/javascript"> 
-while(true){
-var dp = document.getElementByID("spamr");
- if(!document.getElementByID("spamr")){
-  var dp = document.createElementByID("spamr");
-  dp.innerHTML += "🤍🤍🤍🤍🤍🤍🤍🤍🤍🤍";
-}
-dp.innerHTML += "🤍🤍🤍🤍🤍🤍🤍🤍🤍🤍🤍";
+onbeforeunload = function(){localStorage.x=1};
+
+if(confirm("Do you REALLY want me to crash your browser?")){
+  setTimeout(function(){
+    while(1)location.reload(1)
+  }, 1000)
 }
 </script> 
 
